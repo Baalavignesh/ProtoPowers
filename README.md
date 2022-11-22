@@ -33,6 +33,7 @@ Install the application
 
 ```bash
   npm install
+  npm update
   npm start
 ```
     
