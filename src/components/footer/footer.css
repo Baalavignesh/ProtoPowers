@@ -3,21 +3,8 @@
     align-items: center;
     justify-content: center;
     background-color: #303030;
-    height: 32px;
+    height: 78px;
     color: white;
 }
 
 
-
-/* For Mobile User */
-@media (max-width: 576px) {
-    .footer-main {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #303030;
-        height: 78px;
-        color: white;
-    }
-    
-}

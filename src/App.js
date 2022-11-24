@@ -1,6 +1,6 @@
 import { Route, Routes, Navigate } from "react-router-dom";
 import "./App.css";
-import HomePage from "./pages/home-page/home_page";
+import ProductPage from "./pages/product-page/product_page";
 import LoginPage from "./pages/login-page/login_page";
 import SignupPage from "./pages/signup-page/signup_page";
 import WelcomePage from "./pages/welcome-page/welcome_page";
@@ -11,7 +11,7 @@ function App() {
   return (
     <Routes>
       <Route element={<PrivateRoute />}>
-        <Route path="/app" element={<HomePage />}></Route>
+        <Route path="/app" element={<ProductPage />}></Route>
       </Route>
       <Route
         path="/signup"
