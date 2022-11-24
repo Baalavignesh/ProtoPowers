@@ -1,0 +1,26 @@
+.welcome-main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.welcome-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+}
+
+.welcome-text {
+    font-size: 48px;
+    width: 60%;
+}
+
+.welcome-buttons {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 3rem;
+    width: 60%;
+    gap: 8px;
+}

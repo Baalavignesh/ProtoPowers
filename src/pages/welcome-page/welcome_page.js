@@ -1,56 +1,42 @@
-import { Button } from "@mui/material";
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  decrement,
-  increment,
-  setValue,
-} from "../../features/counter/counterSlice";
+import { useNavigate } from "react-router-dom";
+import ProtoButton from "../../components/button/proto-button";
+import Footer from "../../components/footer/footer";
+import Navbar from "../../components/navbar/navbar";
+import "./welcome-page.css";
 
 function WelcomePage() {
-  const val = useSelector((state) => state.counter.value);
-  const dispatch = useDispatch();
+  let navigate = useNavigate();
+
+  let handleLogo = () => {
+    navigate("/");
+  };
 
   return (
-    <div
-      style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
-    >
-      <h1 style={{ textAlign: "center" }}>Welcome Page</h1>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          textAlign: "center",
-          flex: 1,
-        }}
-      >
-        <h1 style={{ margin: "1rem" }}>Current Value = {val}</h1>
-        <div style={{ display: "flex", justifyContent: "center", gap: "8px" }}>
-          <Button
-            color="primary"
-            variant="outlined"
-            onClick={() => dispatch(increment())}
-          >
-            Increment Value by 1
-          </Button>
-          <Button
-            color="primary"
-            variant="outlined"
-            onClick={() => dispatch(decrement())}
-          >
-            Decrement by 1
-          </Button>
-          <Button
-            color="primary"
-            variant="outlined"
-            onClick={() => dispatch(setValue(10))}
-          >
-            Increment Value by 10
-          </Button>
+    <div className="welcome-main">
+      <Navbar logoclick={handleLogo} isWelcome={true} />
+      <div className="welcome-body">
+        <div className="welcome-text">
+          Exclusive Martket Place <br></br>to buy Limited Edition goods
+        </div>
+        <div className="welcome-buttons">
+          <ProtoButton
+            name="Signup"
+            style={{ width: "180px", backgroundColor: "#53A9FF" }}
+            onclick={() => {
+              navigate("/signup");
+            }}
+          />
+          <ProtoButton
+            name="Login"
+            style={{ width: "180px" }}
+            onclick={() => {
+              navigate("/login");
+            }}
+          />
         </div>
       </div>
-      <h1 style={{ textAlign: "center" }}>Footer</h1>
+      <Footer />
     </div>
   );
 }

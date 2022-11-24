@@ -1,0 +1,92 @@
+.field-container {
+    position: relative;
+    user-select: none;
+}
+
+.proto-field {
+    outline: none;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    padding: 12px 12px 8px 12px;
+    width: 320px;
+    height: 32px;
+    color: black;
+    background-color: #D9D9D9;
+    font-size: 16px;
+    transition: 0.8s;
+}
+
+.proto-field:focus~.proto-field-float,
+.proto-field:not(:placeholder-shown)~.proto-field-float {
+    top: 4px;
+    left: 16px;
+    bottom: 8px;
+    font-size: 12px;
+    color: rgb(83, 169, 255);
+    opacity: 1;
+}
+
+.proto-field:focus {
+    border: 2px solid rgb(83, 169, 255);
+}
+
+.proto-field:not(:placeholder-shown) {
+    background-color: #E8F0FE;
+
+}
+
+
+.proto-field:not(:valid) {
+    border: 2px solid red;
+}
+
+.proto-field:not(:valid)~.proto-field-float {
+    color: red;
+}
+
+
+.proto-field-float {
+    position: absolute;
+    pointer-events: none;
+    left: 20px;
+    top: 16px;
+    transition: 0.2s ease all;
+}
+
+
+::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: black;
+    opacity: 80%;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: black;
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: black;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: black;
+    opacity: 80%;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: black;
+    opacity: 80%;
+}
+
+::placeholder {
+    /* Most modern browsers support this now. */
+    color: black;
+    opacity: 80%;
+    text-align: left;
+}

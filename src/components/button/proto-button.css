@@ -1,0 +1,17 @@
+.proto-button {
+    background-color: #1A1A1A;
+    border: 1px solid grey transparent;
+    border-radius: 4px;
+    padding: 12px;
+    width: 320px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+
+    transition: 0.8s;
+}
+
+.proto-button:hover {
+    background-color: rgba(26, 26, 26, 0.823);
+}
