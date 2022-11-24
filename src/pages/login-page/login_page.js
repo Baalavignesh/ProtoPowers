@@ -30,14 +30,14 @@ function LoginPage() {
   return (
     <div className="login-main">
       <NavBar
-        middle="Login"
+        middle="Login" 
         right="Signup?"
         logoclick={handleLogo}
         onclick={rightHandle}
       />
       <div className="login-body">
         {/* Just for Mobile Users */}
-        <h1 className="phone-middle">Login</h1>
+        <h1 className="phone-middle">Login </h1>
 
         <ProtoField
           placeholder="E-Mail"
