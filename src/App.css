@@ -2,6 +2,8 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Jost', sans-serif;
+    color: rgb(40, 40, 40);
+    background-color: rgb(243, 243, 243);
 }
 
 /* font-family: 'Inter', sans-serif;
@@ -12,7 +14,6 @@ font-family: 'Jost', sans-serif; */
 
 h1 {
     font-weight: 400;
-
 }
 
 h2 {
@@ -21,6 +22,10 @@ h2 {
 }
 
 h3 {
+    font-weight: 300;
+}
+
+h4 {
     font-weight: 300;
 }
 

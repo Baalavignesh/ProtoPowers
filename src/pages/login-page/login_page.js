@@ -34,6 +34,8 @@ function LoginPage() {
         right="Signup?"
         logoclick={handleLogo}
         onclick={rightHandle}
+        isWelcome={false}
+        isMain={false}
       />
       <div className="login-body">
         {/* Just for Mobile Users */}

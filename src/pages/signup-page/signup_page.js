@@ -39,6 +39,7 @@ function SignupPage() {
         right="Login?"
         onclick={rightHandle}
         isWelcome={false}
+        isMain={false}
       />
       <div className="signup-body">
         {/* Just for Mobile Users */}

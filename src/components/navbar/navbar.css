@@ -4,22 +4,33 @@
     align-items: center;
     height: 148px;
     user-select: none;
+    justify-content: space-between;
+    padding: 0px 8rem;
 
 }
 
 /* for welcome screen only */
+.navbar-main-welcome {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    height: 78px;
+    user-select: none;
+
+}
+
 .logo-welcome {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    position: absolute;
+    top: 48px;
 }
 
 /*  */
 
 .logo-left {
-    margin-right: auto;
-    margin-left: 6rem;
     cursor: pointer;
     transition: 1s;
 }
@@ -30,20 +41,92 @@
     cursor: pointer;
 }
 
+.nav-middle-main {
+    cursor: pointer;
+    padding-left: 32px;
+    transition: 0.6s;
+}
+
+
+.nav-middle-main:hover {
+    color: rgb(0, 157, 255);
+    text-decoration:underline;
+}
+
 .nav-right {
-    font-size: 26px;
-    font-weight: 300;
-    margin-left: auto;
-    margin-right: 6rem;
-    transition: 0.7s;
-    text-decoration: underline solid transparent;
+    position: relative;
     cursor: pointer;
 }
 
-.nav-right:hover {
+.nav-right-text:hover {
     color: rgb(0, 157, 255);
-    text-decoration: underline solid currentColor;
+    text-decoration: wavy solid currentColor;
 }
+
+.nav-right-text:hover~.arrow-right:before {
+    background: rgb(0, 157, 255);
+    ;
+}
+
+.nav-right-text:hover~.arrow-right::after {
+    border-color: transparent transparent transparent rgb(0, 157, 255);
+    ;
+
+}
+
+.nav-right-text {
+    font-size: 26px;
+    font-weight: 300;
+    transition: 0.7s;
+    text-decoration: underline solid transparent;
+}
+
+/* .arrow-right design - before is the line, after is the head */
+
+.arrow-right {
+    content: "";
+    position: absolute;
+    width: 100px;
+    top: -6px;
+    /* right: -8px; */
+    left: 48px;
+    transition: all 0.3s ease;
+}
+
+/* line length and properties */
+.arrow-right:before {
+    content: "";
+    width: 96px;
+    height: 2px;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    right: 24px;
+    transition: all 0.3s ease;
+}
+
+/* arrow head properties */
+.arrow-right:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-color: transparent transparent transparent transparent;
+    position: absolute;
+    top: 50%;
+    margin-top: -5px;
+    right: 20px;
+    transition: all 0.3s ease;
+}
+
+.arrow-right:hover~.arrow-right::before {
+    background: red;
+}
+
+
+/* */
 
 
 /* For Mobile User */
