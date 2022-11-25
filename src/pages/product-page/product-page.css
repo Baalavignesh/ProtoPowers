@@ -8,7 +8,6 @@
 .product-body {
     display: flex;
     flex: 1;
-    /* align-items: center; */
     justify-content: space-between;
     padding: 0px 8rem;
 }
@@ -35,7 +34,7 @@
 }
 
 .image-size {
-    height: 600px;
+    height: 550px;
 
 }
 
@@ -65,4 +64,10 @@
 .active {
     background-color: #000000;
     opacity: 80%;
+}
+
+
+.price-info {
+    text-align: center;
+    padding: 1rem 0rem;
 }

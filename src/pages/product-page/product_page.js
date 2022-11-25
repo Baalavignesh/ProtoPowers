@@ -27,6 +27,7 @@ function ProductPage() {
         isWelcome={false}
         onclick={rightHandle}
       />
+
       <div className="product-body">
         <div className="product-details">
           <div className="product-name">
@@ -72,6 +73,11 @@ function ProductPage() {
             );
           })}
         </div>
+      </div>
+
+      <div className="price-info">
+        <div>1 out of 2 left</div>
+        <h1>Rs. 2000/-</h1>
       </div>
       <Footer />
     </div>

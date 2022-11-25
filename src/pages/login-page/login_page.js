@@ -24,13 +24,14 @@ function LoginPage() {
   };
 
   const submitHandle = () => {
-    console.log(userInfo);
+    localStorage.setItem("authToken", "yoo bruh");
+    navigate('/app')
   };
 
   return (
     <div className="login-main">
       <NavBar
-        middle="Login" 
+        middle="Login"
         right="Signup?"
         logoclick={handleLogo}
         onclick={rightHandle}

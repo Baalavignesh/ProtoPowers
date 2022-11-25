@@ -28,7 +28,8 @@ function SignupPage() {
   };
 
   const submitHandle = () => {
-    console.log(userInfo);
+    localStorage.setItem("authToken", "yoo bruh");
+    navigate('/app')
   };
 
   return (
